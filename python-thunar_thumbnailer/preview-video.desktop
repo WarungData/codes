@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=X-Thumbnailer
+Name=Preview Video
+MimeType=video/mp4;video/mpeg;
+X-Thumbnailer-Exec=/tmp/preview-video.sh %i %o

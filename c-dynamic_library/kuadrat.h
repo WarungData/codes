@@ -1,0 +1,2 @@
+
+double kuadrat (double x);

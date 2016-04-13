@@ -1,0 +1,24 @@
+- kuadrat.c
+- kuadrat.h
+- lebihbesar.c
+- lebihbesar.h
+- lebihkecil.c
+- lebihkecil.h
+--> compile jadi libmatematika.so
+gcc -fPIC -c kuadrat.c 
+gcc -fPIC -c lebihbesar.c 
+gcc -fPIC -c lebihkecil.c 
+
+gcc -shared -Wl,-soname,libmatematika.so.0 -olibmatematika.so.0.0 kuadrat.o lebihbesar.o lebihkecil.o
+ln -sf libmatematika.so.0.0 libmatematika.so.0
+ln -sf libmatematika.so.0 libmatematika.so
+
+- test_matematika.c
+--> compile agar pakai libmatematika.so
+gcc -o test_matematika test_matematika.c -L. -lmatematika
+--> pakai
+LD_LIBRARY_PATH=. ./test_matematika
+
+
+DL:
+gcc -o dl_test_matematika dl_test_matematika.c -ldl

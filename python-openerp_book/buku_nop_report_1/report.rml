@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<document filename="report.pdf">
+
+  <template pageSize="(612, 792)" title="Report">
+    <pageTemplate id="page">
+      <frame id="page" x1="30.0" y1="30.0" width="552" height="732"/>
+      <pageGraphics>
+        <setFont name="Courier" size="8"/>
+        <drawString x="30" y="20">Halaman <pageNumber/></drawString>
+      </pageGraphics>
+    </pageTemplate>
+  </template>
+
+  <stylesheet>
+    <blockTableStyle id="Table">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1"/>
+    </blockTableStyle>
+    <paraStyle name="Standard" fontName="Courier"/>
+  </stylesheet>
+
+  <story>
+    <para style="Standard">Buku Report 1<br/><br/></para>
+    <para style="Standard">Nama mengandung teks: [[ data.get('form', {}).get('name') ]]<br/><br/></para>
+    <blockTable colWidths="100,200,252" repeatRows="1" style="Table">
+      <tr>
+        <td>
+          <para style="Standard">ID</para>
+	    </td>
+        <td>
+          <para style="Standard">Nama</para>
+	    </td>
+        <td>
+          <para style="Standard">Website</para>
+	    </td>
+	  </tr>
+      <tr>
+        <td>
+          <para style="Standard">[[ repeatIn(objects, 'o') ]]</para>
+          <para style="Standard">[[ o.id ]]</para>
+	    </td>
+        <td>
+          <para style="Standard">[[ o.name ]]</para>
+	    </td>
+        <td>
+          <para style="Standard">[[ o.website ]]</para>
+	    </td>
+	   </tr>
+	 </blockTable>
+  </story>
+
+</document>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_partner_form">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="buku_partner_nop_7.view_partner_form"/>
+            <field name="arch" type="xml">
+        		<field name="title" position="after">
+        			<field name="buku_field_19" on_change="onchange_buku_field_19(buku_field_19)"/>
+        		</field>
+            </field>
+        </record>
+	</data>
+</openerp>

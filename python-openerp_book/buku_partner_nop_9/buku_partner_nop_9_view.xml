@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_partner_form">
+            <field name="name">res.partner.form</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="buku_partner_nop_7.view_partner_form"/>
+            <field name="priority" eval="100"/>
+            <field name="arch" type="xml">
+            	<notebook>
+            		<page string="Bukan perusahaan" attrs="{'invisible': [('is_company', '=', True)]}">
+            			<group>
+            				<field name="buku_field_17" password="True" nolabel="1" colspan="2"/>
+            				<field name="buku_field_18" attrs="{'required': ['&amp;', ('is_company', '=', False), ('street', '=', False)]}"/>
+            			</group>
+	            	</page>
+            	</notebook>
+            </field>
+        </record>
+	</data>
+</openerp>

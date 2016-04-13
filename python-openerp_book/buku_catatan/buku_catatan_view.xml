@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="view_catatan_form">
+            <field name="name">buku.catatan.form</field>
+            <field name="model">buku.catatan</field>
+            <field name="arch" type="xml">            	
+            	<form string="Catatan">
+        			<group>
+		            	<field name="title"/>
+		            	<field name="content"/>
+	            	</group>
+            	</form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_catatan_tree">
+            <field name="name">buku.catatan.tree</field>
+            <field name="model">buku.catatan</field>
+            <field name="arch" type="xml">            	
+            	<tree string="Catatan" editable="bottom">
+	            	<field name="title"/>
+	            	<field name="content"/>
+            	</tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="action_buku_catatan_tree">
+            <field name="name">Catatan</field>
+            <field name="res_model">buku.catatan</field>
+        </record>
+
+        <menuitem name="Buku" id="menu_buku"/>
+        <menuitem name="Catatan" id="menu_buku_catatan" parent="menu_buku"/>
+        <menuitem name="Catatan" id="menu_buku_catatan_tree" parent="menu_buku_catatan" action="action_buku_catatan_tree"/>
+
+	</data>
+</openerp>

@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Shredder
+Exec=/tmp/test/script/shredder.py %F
+

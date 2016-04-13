@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+	
+		<report 
+			id="report_buku_nop_report_1"
+			name="buku.nop.report.1"
+			string="Buku Report 1"
+			model="res.partner"
+			rml="buku_nop_report_1/report.rml"
+			auto="False"
+			header="False"/>
+
+	</data>
+</openerp>

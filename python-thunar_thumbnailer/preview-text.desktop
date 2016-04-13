@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Type=X-Thumbnailer
+Name=Preview Text
+MimeType=text/plain;
+X-Thumbnailer-Exec=/tmp/preview-text.py %i %o %s

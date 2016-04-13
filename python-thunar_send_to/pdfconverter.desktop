@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=PDF Converter
+Exec=/tmp/test/script/pdfconverter.py %f
+MimeType=application/pdf;
+

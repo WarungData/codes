@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="buku_nop_report_1_form">
+            <field name="name">buku.nop.report.1</field>
+            <field name="model">buku.nop.report.1</field>
+            <field name="arch" type="xml">            	
+            	<form string="Buku Report 1">
+        			<group>
+        			
+		            	<field name="name"/>
+
+		            	<button 
+		            		name="download_pdf" 
+		            		type="object" 
+		            		string="PDF"
+		            		class="oe_highlight"/>
+		            	<button string="Cancel" special="cancel"/>
+		            	
+	            	</group>
+            	</form>
+            </field>
+        </record>
+
+		<record model="ir.actions.act_window" id="action_buku_nop_report_1">
+			<field name="name">Report 1</field>
+			<field name="res_model">buku.nop.report.1</field>
+			<field name="view_id" ref="buku_nop_report_1_form"/>
+			<field name="target">new</field>
+		</record>	
+
+        <menuitem name="Buku" id="menu_buku"/>
+        <menuitem name="Report" id="menu_buku_report" parent="menu_buku"/>
+        <menuitem name="Buku Report 1" id="menu_buku_report_nop_report_1" parent="menu_buku_report" action="action_buku_nop_report_1"/>
+
+	</data>
+</openerp>
